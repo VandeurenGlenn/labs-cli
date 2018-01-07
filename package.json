@@ -1,0 +1,36 @@
+{
+  "name": "labs-cli",
+  "version": "0.1.0-alpha",
+  "description": "Command Line Interface for revolutionlabs",
+  "bin": {
+    "labs": "bin/index.js"
+  },
+  "repository": "https://septimal-balinese-2547.dataplicity.io/labs-cli.git",
+  "author": "Glenn Vandeuren <vandeurenglenn@gmail.com>",
+  "license": "MIT",
+  "private": false,
+  "dependencies": {
+    "commander": "^2.12.2",
+    "crypto-checkpoints": "^0.1.0-alpha.1",
+    "crypto-daemon": "^0.1.4",
+    "crypto-io-api": "^0.1.1-alpha",
+    "crypto-ipfs-node": "^0.1.0-alpha.1",
+    "rollup-plugin-commonjs": "^8.2.6"
+  },
+  "backed": {
+    "bundles": [
+      {
+        "src": "src/index.js",
+        "dest": "bin/cli.js",
+        "format": "cjs",
+        "plugins": {
+          "json": {},
+          "commonjs": {}
+        }
+      }
+    ]
+  },
+  "devDependencies": {
+    "rollup-plugin-json": "^2.3.0"
+  }
+}
