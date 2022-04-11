@@ -15,7 +15,8 @@
     "crypto-daemon": "^0.1.4",
     "crypto-io-api": "^0.1.1-alpha",
     "crypto-ipfs-node": "^0.1.0-alpha.1",
-    "rollup-plugin-commonjs": "^8.2.6"
+    "rollup-plugin-commonjs": "^8.2.6",
+    "@snyk/protect": "latest"
   },
   "backed": {
     "bundles": [
@@ -32,5 +33,10 @@
   },
   "devDependencies": {
     "rollup-plugin-json": "^2.3.0"
-  }
+  },
+  "scripts": {
+    "prepare": "npm run snyk-protect",
+    "snyk-protect": "snyk-protect"
+  },
+  "snyk": true
 }
